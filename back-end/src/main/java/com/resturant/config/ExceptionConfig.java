@@ -27,16 +27,4 @@ public class ExceptionConfig {
         return ResponseEntity.ok(new ExceptionDto(HttpStatus.NOT_ACCEPTABLE, BundleMessageService.getMessages(runtimeException.getMessage())));
     }
 
-
-
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    ResponseEntity<List<BundleMessage>> handleRuntimeException(MethodArgumentNotValidException methodArgumentNotValidException){
-//        List<FieldError> errors =methodArgumentNotValidException.getBindingResult().getFieldErrors();
-//
-//        List<BundleMessage> bundleMessages =new ArrayList<>();
-//        for (FieldError fieldError: errors) {
-//            bundleMessages.add(BundleMessageService.getMessages(fieldError.getDefaultMessage()));
-//        }
-//        return ResponseEntity.internalServerError().body(bundleMessages);
-//    }
 }
