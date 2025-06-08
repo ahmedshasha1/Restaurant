@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+<!--  <link rel="stylesheet" href="style.css" />-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="login-container">
+  <h2>Login</h2>
+  <form  method="post">
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input  type="text"  placeholder="Email Address" id="email" name="email" required #email />
+    </div>
+    <div class="input-group" >
+      <label for="password">Password</label>
+      <input  type="password"  placeholder="Password"  id="password" name="password" required #password />
+    </div>
+    <button  type="button" (click)=login(email.value,password.value) class="submit">Login</button>
+  </form>
+  <div class="extra">
+    Don't have an account? <a routerLink="/sign-up">Sign up</a>
+  </div>
+</div>
+<p class="notification error notificationAr" *ngIf="messageAr != ''">{{messageAr}}</p>
+<p class="notification error notificationEn" *ngIf="messageEn != ''">{{messageEn}}</p>
+</body>
+</html>

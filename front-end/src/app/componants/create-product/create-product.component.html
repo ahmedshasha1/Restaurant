@@ -1,0 +1,20 @@
+<div class="form-container animate__animated animate__fadeInDown">
+  <h2>ADD New Product</h2>
+
+  <div class="alert" *ngIf="messageAr || messageEn">
+    <p>{{ messageAr }}</p>
+    <p>{{ messageEn }}</p>
+  </div>
+
+  <form  >
+    <input #name type="text" placeholder="Name" required>
+    <input #logoPath type="text" placeholder="Image link" required>
+    <textarea #description rows="3" placeholder="Description" required></textarea>
+    <input #price type="number" placeholder="Price" required>
+    <input #category type="number" placeholder="Category Id" required>
+
+    <button type="button" class="submit" (click)="createProduct(name.value, logoPath.value, description.value, price.value, category.value)">ADD PRODUCT</button>
+  </form>
+</div>
+
+

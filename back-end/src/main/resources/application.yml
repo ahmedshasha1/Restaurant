@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: resturant
+
+
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/orclpdb
+    username: hr
+    password: hr
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  messages:
+    baseName: i18n/messages
+    local-default: en
+
+
+spring-token:
+  secret: kkkjgkhkd669$#65@#fghdfyhrtyerytryrtydfgjfg
+  time: 1h
+
+server:
+  port: 9090
+
+
+

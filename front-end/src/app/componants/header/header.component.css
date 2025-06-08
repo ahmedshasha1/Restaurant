@@ -1,0 +1,75 @@
+.logout {
+  position: absolute;
+  top: 36px;
+  right: -54px;
+}
+
+.logout button {
+  background-color: #e53935; /* لون أحمر أنيق */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout button:hover {
+  background-color: #c62828; /* لون أغمق عند المرور */
+}
+
+/*  drop   */
+
+.user-actions-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle-btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.dropdown-toggle-btn:hover {
+  color: #007bff;
+}
+
+.dropdown-menu-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.dropdown-menu-link, .dropdown-menu-item {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #212529;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu-link:hover, .dropdown-menu-item:hover {
+  color: #16181b;
+  background-color: #f8f9fa;
+}

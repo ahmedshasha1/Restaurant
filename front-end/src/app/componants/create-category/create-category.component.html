@@ -1,0 +1,19 @@
+<div class="form-container animate__animated animate__fadeInDown">
+  <h2>ADD New Product</h2>
+
+  <div class="alert" *ngIf="messageAr || messageEn">
+    <p>{{ messageAr }}</p>
+    <p>{{ messageEn }}</p>
+  </div>
+
+  <form  >
+    <input #name type="text" placeholder="Name" required>
+    <input #logoPath type="text" placeholder="Image link" required>
+    <textarea #flag rows="3" placeholder="Flag" required></textarea>
+
+
+    <button type="button" class="submit" (click)="createCategory(name.value, logoPath.value, flag.value)">ADD Category</button>
+  </form>
+</div>
+
+

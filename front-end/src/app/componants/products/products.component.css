@@ -1,0 +1,82 @@
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-pane .col-lg-6 {
+  background: #b2b7bc;
+  border-radius: 16px;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tab-pane .col-lg-6:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.img-fluid.rounded {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #eee;
+}
+
+.w-100 {
+  margin-left: 15px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.text-primary {
+  color: #e74c3c !important; /* لون السعر */
+  font-weight: bold;
+}
+
+.fst-italic {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.btn-danger {
+  background: #6b6363;
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 8px 12px;
+  /*transition: background-color 0.3s ease-in-out;*/
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.no-products-message-ar,
+.no-products-message {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* Pagination Styling */
+::ng-deep ngb-pagination .page-item .page-link {
+  color: #333;
+  border-radius: 10px;
+  margin: 0 2px;
+}
+
+::ng-deep ngb-pagination .page-item.active .page-link {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}

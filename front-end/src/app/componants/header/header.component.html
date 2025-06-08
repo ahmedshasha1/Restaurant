@@ -1,0 +1,45 @@
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+    <a routerLink="/products" class="navbar-brand p-0">
+      <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+      <!-- <img src="img/logo.png" alt="Logo"> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <input *ngIf="isUserLogin()" class="form-control" type="search" placeholder="Search" aria-label="Search" #key (input)="search(key.value)">
+      <button *ngIf="isUserLogin()" class="btn btn-outline-success" type="submit" >Search</button>
+      <div class="navbar-nav ms-auto py-0 pe-4">
+        <div *ngIf="isUserLogin() && !isUserAdmin()" class="nav-item nav-link active"><a routerLink="/contact-info">Contact</a></div>
+        <div class="nav-item nav-link active"> </div>
+        <div *ngIf="isUserLogin() && isUserAdmin()" class="nav-item nav-link active"><a routerLink="/chefs">Team</a></div>
+        <div class="nav-item nav-link active"> </div>
+        <div  class="nav-item dropdown" *ngIf="isUserLogin()">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >Actions</a>
+          <div class="dropdown-menu m-0">
+            <button *ngIf="isUserAdmin()" class="dropdown-menu-btn">
+              <a routerLink="/create-product" class="dropdown-menu-link">Add Product</a>
+            </button>
+            <button *ngIf="isUserAdmin()" class="dropdown-menu-btn">
+              <a routerLink="/create-category" class="dropdown-menu-link">Add Category</a>
+            </button>
+            <a routerLink="/orderDetails/user" class="dropdown-menu-item" >Request Orders</a>
+            <a *ngIf="isUserAdmin()" routerLink="orderDetails/alluser" class="dropdown-menu-item">All Request Orders</a>
+            <a *ngIf="isUserAdmin()" routerLink="/orderDetails/allUser" class="dropdown-menu-item">User's Problem</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <app-card *ngIf="isUserLogin()"></app-card>
+    <button *ngIf="isUserLogin()" class="nav-item nav-link active"><a (click)="logOut()">LogOut</a></button>
+  </nav>
+
+  <div class="container-xxl py-5 bg-dark hero-header mb-5">
+  </div>
+</div>
+<!-- Navbar & Hero End -->

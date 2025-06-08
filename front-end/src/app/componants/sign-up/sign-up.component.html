@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+</head>
+<body>
+<div class="background"></div>
+<div class="container">
+  <form class="signup-box" method="post">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name" required #name />
+    <input type="email" placeholder="Email" required #email/>
+    <input type="text" placeholder="Phone Number" required #phone/>
+    <input type="password" placeholder="Password" required #password/>
+    <input type="password" placeholder="Confirm Password" required #confirmPassword />
+    <button type="button" class="submit" (click)=createUser(name.value,email.value,phone.value,password.value,confirmPassword.value)>Create Account</button>
+    <p>Already have an account? <a routerLink="/login">Login</a></p>
+  </form>
+</div>
+<p class="notification error notificationAr" *ngIf="messageAr != ''">{{messageAr}}</p>
+<p class="notification error notificationEn" *ngIf="messageEn != ''">{{messageEn}}</p>
+
+
+</body>
+</html>
