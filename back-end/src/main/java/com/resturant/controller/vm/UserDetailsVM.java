@@ -18,7 +18,6 @@ public class UserDetailsVM {
     private String name;
     private String email;
     private String phoneNumber;
-    private List<String> role;
     private boolean active = true;
 
 }
