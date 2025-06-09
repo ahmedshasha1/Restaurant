@@ -93,7 +93,6 @@ public class UserServiceImpl implements UserService {
             userDetailsVM.setName(users.get(i).getName());
             userDetailsVM.setEmail(users.get(i).getEmail());
             userDetailsVM.setPhoneNumber(users.get(i).getPhone());
-            userDetailsVM.setRole(users.get(i).getRoles().get(i).getRole());
             usersDetails.add(userDetailsVM);
 
         }
